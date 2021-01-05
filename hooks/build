@@ -10,4 +10,5 @@
 docker build --progress plain \
     --build-arg KNXD_VERSION=$KNXD_VERSION \
     --build-arg KNXD_RELEASE_TAG=$KNXD_RELEASE_TAG \
+    -t $IMAGE_NAME \
     .
