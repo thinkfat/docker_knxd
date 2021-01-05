@@ -1,8 +1,13 @@
 #!/bin/bash
 
-docker buildx build \
-    --progress plain \
-    --platform=linux/amd64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm64/v8 \
+#docker buildx build \
+#    --progress plain \
+#    --platform=linux/amd64,linux/386,linux/arm/v7,linux/arm/v6,linux/arm64/v8 \
+#    --build-arg KNXD_VERSION=$KNXD_VERSION \
+#    --build-arg KNXD_RELEASE_TAG=$KNXD_RELEASE_TAG \
+#    .
+
+docker build --progress plain \
     --build-arg KNXD_VERSION=$KNXD_VERSION \
     --build-arg KNXD_RELEASE_TAG=$KNXD_RELEASE_TAG \
     .
